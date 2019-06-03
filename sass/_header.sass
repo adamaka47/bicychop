@@ -1,0 +1,56 @@
+.header
+	background: url('../img/main_bg.jpg') center no-repeat
+	background-size: cover
+	min-height: 100vh
+	&-top
+		padding-top: 30px
+		position: relative
+		&-menu
+			display: flex
+			justify-content: center
+			align-items: center
+			li
+				margin-right: 75px
+				&:last-child
+					margin-right: 0
+				a
+					text-decoration: none
+					text-transform: uppercase
+					font-weight: 900
+					color: $text
+					font-size: 14px
+					letter-spacing: 2.6px
+					transition: 0.2s all
+					&:hover
+						color: #000
+						text-decoration: underline
+				a.header-top_logo
+					border: none
+
+@media (max-width: 767.98px)
+	.header
+		&-top
+			padding-right: 15px
+			padding-left: 15px
+			&-menu
+				justify-content: space-between
+				li
+					margin: 0
+					a
+						font-size: 14px
+
+@media (max-width: 575.98px)
+	.header
+		&-top
+			&-menu
+				flex-direction: column
+				li.header-img
+					order: 1
+					position: absolute
+					left: 10px
+					top: 50%
+					transform: translateY(-50%)
+					width: 60px
+					height: 60px
+				li
+					margin-bottom: 15px

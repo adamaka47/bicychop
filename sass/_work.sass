@@ -1,0 +1,116 @@
+.work
+	.grid
+		display: grid
+		grid-template-areas: 'a a b' 'c d d' 'e f g'
+		&-item
+			&-img
+				background: url('../img/bic_sid_1.jpg') center no-repeat
+				background-size: cover
+				width: 100%
+				height: 200px
+				position: relative
+				&::before
+					content: ''
+					position: absolute
+					border: 10px solid transparent
+					border-top: 15px solid #fff
+					left: 50%
+					transform: translateX(-50%)
+			&-text
+				padding-top: 50px
+				h3
+					font-size: 18px
+					line-height: 1.5
+					margin-top: 25px
+					padding: 0 20px
+					margin-bottom: 20px
+					font-weight: 900
+					letter-spacing: 3.6px
+					text-transform: uppercase
+					color: $text
+					text-align: center
+				p
+					font-weight: 400
+					padding: 0 60px
+					font-size: 16px
+					color: $text
+					line-height: 1.85
+					text-align: justify
+					&::after
+						content: ''
+						display: block
+						height: 1px
+						width: 50px
+						background-color: $text
+						margin: 40px auto
+						margin-top: 30px
+				img
+					margin: 0 auto
+			&-one
+				grid-area: a
+				background: #222 url('../img/bicycle_comp.jpg') center no-repeat
+				background-size: cover
+				display: block
+				display: flex
+				align-items: center
+				justify-content: center
+			&-two
+				grid-area: b
+			&-three
+				grid-area: c
+				.grid-item-img
+					background: url('../img/bic_sid_2.jpg') center no-repeat
+					background-size: cover
+			&-four
+				grid-area: d
+				background: #222 url('../img/bic_vintage.jpg') center no-repeat
+				background-size: cover
+				display: block
+				display: flex
+				align-items: center
+				justify-content: center
+			&-five
+				grid-area: e
+				background: #222 url('../img/bic_bicycles.jpg') center no-repeat
+				background-size: cover
+				display: block
+				display: flex
+				align-items: center
+				justify-content: center
+			&-six
+				grid-area: f
+				.grid-item-img
+					background: url('../img/bic_mavic.jpg') center no-repeat
+					background-size: cover
+			&-seven
+				grid-area: g
+				background: #222 url('../img/bic_bicycles.jpg') center no-repeat
+				background-size: cover
+
+
+@media (max-width: 991.98px)
+	.work
+		.grid
+			grid-template-areas: 'a a a' 'b b b' 'd d d' 'c c c' 'e e e' 'f f f' 'f f f' 'g g g'
+			&-item
+				&-text
+					padding-top: 30px
+				&-one
+					height: 400px
+					margin-bottom: 50px
+				&-four
+					height: 400px
+					margin: 50px 0
+				&-five
+					height: 400px
+					margin: 50px 0
+				&-seven
+					height: 400px
+					margin: 50px 0
+					margin-bottom: 0
+				p
+					padding: 0 30px
+					&::after
+						display: none
+				&-img
+					display: none

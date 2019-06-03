@@ -1,0 +1,62 @@
+.shop
+	.grid
+		display: grid
+		grid-template-areas: 'aa bb cc dd ee ee' 'ff ff cc dd gg gg'
+		&-item
+			border: 1px solid $text
+			&:nth-child(1)
+				grid-area: aa
+				background: url('../img/bottom_1.jpg') center no-repeat
+				background-size: cover
+				display: block
+				height: 267px
+			&:nth-child(2)
+				grid-area: bb
+				background: url('../img/bottom_2.jpg') center no-repeat
+				background-size: cover
+				display: block
+			&:nth-child(3)
+				grid-area: cc
+				background: url('../img/bottom_3.jpg') center no-repeat
+				background-size: cover
+				display: block
+			&:nth-child(4)
+				grid-area: dd
+				background: url('../img/bottom_4.jpg') center no-repeat
+				background-size: cover
+				display: block
+			&:nth-child(5)
+				grid-area: ee
+				background: url('../img/bottom_5.jpg') center no-repeat
+				background-size: cover
+				display: block
+				display: flex
+				justify-content: center
+				align-items: center
+			&:nth-child(6)
+				grid-area: ff
+				background: url('../img/bottom_6.jpg') center no-repeat
+				background-size: cover
+				display: block
+				height: 267px
+			&:nth-child(7)
+				grid-area: gg
+				background: url('../img/bottom_7.jpg') center no-repeat
+				background-size: cover
+				display: block
+
+
+@media (max-width: 991.98px)
+	.shop
+		.grid
+			grid-template-areas: "ee ee ee ee ee ee" "aa aa aa bb bb bb" "cc cc cc dd dd dd" "ff ff ff gg gg gg"
+			&-item
+				height: 267px
+				border: none
+
+@media (max-width: 575.98px)
+	.shop
+		.grid
+			grid-template-areas: "ee ee ee ee ee ee" "aa aa aa aa aa aa" "bb bb bb bb bb bb" "cc cc cc cc cc cc" "dd dd dd dd dd dd" "ff ff ff ff ff ff" "gg gg gg gg gg gg"
+			&-item
+				border: 1px solid $text
